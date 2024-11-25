@@ -22,13 +22,13 @@ int main() {
     while (1) {
         print_menu();
         scanf("%d", &choice);
-        getchar(); // Consume newline
+        getchar(); 
 
         switch (choice) {
             case 1:
                 printf("Enter name: ");
                 fgets(contact.name, MAX_NAME, stdin);
-                contact.name[strcspn(contact.name, "\n")] = 0; // Remove newline
+                contact.name[strcspn(contact.name, "\n")] = 0; // Remove the newline
                 printf("Enter phone number: ");
                 fgets(contact.phone, MAX_PHONE, stdin);
                 contact.phone[strcspn(contact.phone, "\n")] = 0;
